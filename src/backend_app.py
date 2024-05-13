@@ -11,13 +11,13 @@ cors = CORS(app, resources={r"/*": {"origins":"*"}})
 @app.route("/", methods=["GET"])
 def hello():
     print("Successful Get Test")
-    return "Hi world", 200
+    return "Hi world from backend app", 200
 
 @app.route("/test", methods=["GET"])
 def test_get():
     token = request.authorization.token
     print("Successful Get Test")
-    return "Hey world", 200
+    return "Hey world from backend app", 200
 
 @app.route("/test", methods=["POST"])
 def test_post():
