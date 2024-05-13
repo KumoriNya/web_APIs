@@ -21,14 +21,14 @@ def test_get():
 
 @app.route("/test", methods=["POST"])
 def test_post():
-    # data = request.get_json()
+    data = request.get_json()
     print("Successful Post Test")
     
-    # token = jwt.encode(data, 'secret', algorithm='HS256')
+    token = jwt.encode(data, 'secret', algorithm='HS256')
     
-    # response = jsonify({"token": token})
+    response = jsonify({"token": token})
     
-    return "POST success from backend app", 200
+    return response, 200
 
 if __name__=="__main__":
     print("*****************\nRunning in src direct\n**************")
