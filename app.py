@@ -11,7 +11,7 @@ cors = CORS(app, resources={r"/*": {"origins":"*"}})
 @app.route("/", methods=["GET"])
 def hello():
     print("Successful Get Test")
-    return "Hello world", 200
+    return "ROOT GET", 200
 
 @app.route("/test", methods=["GET"])
 def test_get():
@@ -21,7 +21,7 @@ def test_get():
         print(">0")
     else:
         print("=0")
-    return "Hello world", 200
+    return "TEST GET", 200
 
 @app.route("/test", methods=["POST"])
 def test_post():
